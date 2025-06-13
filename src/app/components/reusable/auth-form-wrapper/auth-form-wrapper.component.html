@@ -1,0 +1,7 @@
+<div class="form-wrapper">
+  <div class="form-card" [ngStyle]="{ width: width }">
+    <h2 class="form-title">{{ formTitle }}</h2>
+    <p *ngIf="formSubTitle" class="form-subtitle">{{ formSubTitle }}</p>
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -1,0 +1,159 @@
+<section>
+    <app-tab-switcher>
+        <ng-template #tabLabel>Dry Cleaning</ng-template>
+        <ng-template #tabLabel>Steam Press</ng-template>
+        <ng-template #tabLabel>Wash & Fold</ng-template>
+        <ng-template #tabLabel>Wash & Iron</ng-template>
+        <ng-template #tabLabel>Premium Laundry by Kg</ng-template>
+        <ng-template #tabLabel>Standard Iron</ng-template>
+
+        <!-- Dry Cleaning Tab -->
+
+        <ng-template #tabContent>
+            <div class="header">
+                <app-search-bar class="search-bar" [(model)]="searchTerm" placeholder="Search..."
+                    (search)="onSearchTermChange($event)">
+                </app-search-bar>
+
+                <app-button icon="fa-solid fa-circle-plus">Add Items</app-button>
+            </div>
+
+            <app-table [columns]="['srNo', 'type', 'itemName', 'price']" [data]="tableData" [searchTerm]="searchTerm"
+                [showActions]="true" [showEdit]="true" [showDelete]="true" (edit)="openModal()"
+                (delete)="onDelete($event)">
+            </app-table>
+
+            <app-modal [isVisible]="showModal" title="My Modal" (close)="closeModal()">
+                <p>Dry Cleaning Pop up Modal</p>
+            </app-modal>
+        </ng-template>
+
+        <!-- Stream Press Tab -->
+
+        <ng-template #tabContent>
+            <div class="header">
+                <app-search-bar class="search-bar" [(model)]="searchTerm" placeholder="Search..."
+                    (search)="onSearchTermChange($event)">
+                </app-search-bar>
+
+                <app-button icon="fa-solid fa-circle-plus">Add Items</app-button>
+            </div>
+
+            <app-table [columns]="['srNo', 'type', 'itemName', 'price']" [data]="tableData" [searchTerm]="searchTerm"
+                [showActions]="true" [showEdit]="true" [showDelete]="true" (edit)="openModal()"
+                (delete)="onDelete($event)">
+            </app-table>
+
+            <app-modal [isVisible]="showModal" title="My Modal" (close)="closeModal()">
+                <p>Stream Press Pop up Modal</p>
+            </app-modal>
+        </ng-template>
+
+        <!-- Wash & Fold Tab -->
+
+        <ng-template #tabContent>
+            <div class="header">
+                <app-search-bar class="search-bar" [(model)]="searchTerm" placeholder="Search..."
+                    (search)="onSearchTermChange($event)">
+                </app-search-bar>
+
+                <app-button icon="fa-solid fa-circle-plus">Add Items</app-button>
+            </div>
+
+            <app-table [columns]="['service', 'price']" [data]="tableData" [searchTerm]="searchTerm"
+                [showActions]="true" [showEdit]="true" [showDelete]="true" (edit)="openModal()"
+                (delete)="onDelete($event)" [pageSize]="3">
+            </app-table>
+
+            <app-modal [isVisible]="showModal" title="My Modal" (close)="closeModal()">
+                <p>This is a reusable modal. You can place any content here.</p>
+            </app-modal>
+
+            <div class="addons-section">
+                <div class="addons-header">
+                    <app-button icon="fa-solid fa-circle-plus" class="sBtn">Add Items</app-button>
+                </div>
+
+                <app-table [columns]="['addons', 'price']" [data]="tableData" [searchTerm]="searchTerm"
+                    [showActions]="true" [showEdit]="true" [showDelete]="true" (edit)="openModal()"
+                    (delete)="onDelete($event)" [pageSize]="3">
+                </app-table>
+            </div>
+        </ng-template>
+
+        <!-- Wash & Iron -->
+
+        <ng-template #tabContent>
+            <div class="header">
+                <app-search-bar class="search-bar" [(model)]="searchTerm" placeholder="Search..."
+                    (search)="onSearchTermChange($event)">
+                </app-search-bar>
+
+                <app-button icon="fa-solid fa-circle-plus">Add Items</app-button>
+            </div>
+
+            <app-table [columns]="['service', 'price']" [data]="tableData" [searchTerm]="searchTerm"
+                [showActions]="true" [showEdit]="true" [showDelete]="true" (edit)="openModal()"
+                (delete)="onDelete($event)" [pageSize]="3">
+            </app-table>
+
+            <app-modal [isVisible]="showModal" title="My Modal" (close)="closeModal()">
+                <p>This is a reusable modal. You can place any content here.</p>
+            </app-modal>
+
+            <div class="addons-section">
+                <div class="addons-header">
+                    <app-button icon="fa-solid fa-circle-plus" class="sBtn">Add Items</app-button>
+                </div>
+
+                <app-table [columns]="['addons', 'price']" [data]="tableData" [searchTerm]="searchTerm"
+                    [showActions]="true" [showEdit]="true" [showDelete]="true" (edit)="openModal()"
+                    (delete)="onDelete($event)" [pageSize]="3">
+                </app-table>
+            </div>
+        </ng-template>
+
+        <!-- Premium Laundry by Kg Tab -->
+
+        <ng-template #tabContent>
+            <div class="header">
+                <app-search-bar class="search-bar" [(model)]="searchTerm" placeholder="Search..."
+                    (search)="onSearchTermChange($event)">
+                </app-search-bar>
+
+                <app-button icon="fa-solid fa-circle-plus">Add Items</app-button>
+            </div>
+
+            <app-table [columns]="['service', 'price']" [data]="tableData" [searchTerm]="searchTerm"
+                [showActions]="true" [showEdit]="true" [showDelete]="true" (edit)="openModal()"
+                (delete)="onDelete($event)" [pageSize]="3">
+            </app-table>
+
+            <app-modal [isVisible]="showModal" title="My Modal" (close)="closeModal()">
+                <p>This is a reusable modal. You can place any content here.</p>
+            </app-modal>
+        </ng-template>
+
+        <!-- Standard Iron Tab -->
+
+        <ng-template #tabContent>
+            <div class="header">
+                <app-search-bar class="search-bar" [(model)]="searchTerm" placeholder="Search..."
+                    (search)="onSearchTermChange($event)">
+                </app-search-bar>
+
+                <app-button icon="fa-solid fa-circle-plus">Add Items</app-button>
+            </div>
+
+            <app-table [columns]="['service', 'price']" [data]="tableData" [searchTerm]="searchTerm"
+                [showActions]="true" [showEdit]="true" [showDelete]="true" (edit)="openModal()"
+                (delete)="onDelete($event)" [pageSize]="3">
+            </app-table>
+
+            <app-modal [isVisible]="showModal" title="My Modal" (close)="closeModal()">
+                <p>This is a reusable modal. You can place any content here.</p>
+            </app-modal>
+        </ng-template>
+    </app-tab-switcher>
+
+</section>

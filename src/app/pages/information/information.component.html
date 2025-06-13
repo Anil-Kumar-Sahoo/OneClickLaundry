@@ -1,0 +1,62 @@
+<app-card>
+    <!-- BASIC INFO -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Store Details</h2>
+        </div>
+        <div class="info-grid">
+            <div><strong>Store Code:</strong> {{ store.code }}</div>
+            <div><strong>Mobile:</strong> {{ store.mobile }}</div>
+            <div><strong>Store Name:</strong> {{ store.name }}</div>
+            <div><strong>Franchise:</strong> {{ store.franchise }}</div>
+            <div class="full"><strong>Address:</strong> {{ store.address }}</div>
+            <div><strong>Latitude:</strong> {{ store.latitude }}</div>
+            <div><strong>Longitude:</strong> {{ store.longitude }}</div>
+            <div><strong>GSTIN:</strong> {{ store.gstin }}</div>
+        </div>
+    </section>
+
+    <!-- BANK INFO -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Bank Details</h2>
+            <button (click)="isBankEditable = !isBankEditable">
+                {{ isBankEditable ? 'Save' : 'Edit' }}
+            </button>
+        </div>
+        <div *ngIf="!isBankEditable" class="info-grid">
+            <div><strong>Bank:</strong> {{ bank.name }}</div>
+            <div><strong>Account No:</strong> {{ bank.accountNumber }}</div>
+            <div><strong>IFSC:</strong> {{ bank.ifsc }}</div>
+            <div><strong>BHIM UPI:</strong> {{ bank.upi || '-' }}</div>
+        </div>
+
+        <div *ngIf="isBankEditable" class="edit-grid">
+            <label>Bank Name: <input [(ngModel)]="bank.name" /></label>
+            <label>Account No: <input [(ngModel)]="bank.accountNumber" /></label>
+            <label>IFSC Code: <input [(ngModel)]="bank.ifsc" /></label>
+            <label>BHIM UPI: <input [(ngModel)]="bank.upi" /></label>
+        </div>
+    </section>
+
+    <!-- TIMING -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Working Hours</h2>
+            <button (click)="isTimingEditable = !isTimingEditable">
+                {{ isTimingEditable ? 'Save' : 'Edit' }}
+            </button>
+        </div>
+        <div *ngIf="!isTimingEditable" class="timing-list">
+            <div *ngFor="let t of timings">
+                <strong>{{ t.day }}:</strong> {{ t.time }}
+            </div>
+            </div>
+
+        <div *ngIf="isTimingEditable" class="timing-edit">
+            <div *ngFor="let t of timings">
+                <label>{{ t.day }}: <input [(ngModel)]="t.time" /></label>
+            </div>
+        </div>
+    </section>
+</app-card>

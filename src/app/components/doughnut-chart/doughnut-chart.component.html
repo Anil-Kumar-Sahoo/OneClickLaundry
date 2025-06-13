@@ -1,0 +1,34 @@
+<!-- doughnut-chart.component.html -->
+<div class="summary">
+    <p><strong>Sales Overview</strong></p>
+    <app-date-input></app-date-input>
+</div>
+
+<div class="chart-legend-container">
+    <div class="chart-wrapper">
+        <canvas #doughnutCanvas></canvas>
+    </div>
+
+    <div class="legend">
+        <div class="legend-item">
+            <span class="legend-color" style="background-color: #20B0B1;"></span>
+            Dry Cleaning <span class="percentage">52%</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-color" style="background-color: #558787;"></span>
+            Steam Iron <span class="percentage">27%</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-color" style="background-color: #FFC107;"></span>
+            Wash and Iron <span class="percentage">21%</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-color" style="background-color: #4CAF50;"></span>
+            Wash & Fold <span class="percentage">21%</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-color" style="background-color: #E91E63;"></span>
+            Premium Laundry <span class="percentage">21%</span>
+        </div>
+    </div>
+</div>

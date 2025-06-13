@@ -1,0 +1,165 @@
+<div class="table-wrapper">
+    <table class="custom-table">
+        <thead>
+            <tr>
+                <th>Order id</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Pickup</th>
+                <th>Delivery</th>
+                <th>Invoice</th>
+                <th>Order ready</th>
+                <th>Assign delivery</th>
+                <th>Delivery done</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ORD001</td>
+                <td>Michael Scott</td>
+                <td>New York</td>
+                <td>2025-06-01 10:00</td>
+                <td>2025-06-02 15:00</td>
+                <td>
+                    <button class="action-btn">Generate</button>
+                </td>
+                <td>
+                    <button class="action-btn" disabled="true">Generate</button>
+                </td>
+                <td>John Doe</td>
+                <td>
+                    <button class="action-btn" [disabled]="true">Mark Done</button>
+                </td>
+            </tr>
+            <tr>
+                <td>ORD002</td>
+                <td>Pam Beesly</td>
+                <td>Los Angeles</td>
+                <td>2025-06-03 12:30</td>
+                <td>2025-06-04 18:00</td>
+                <td class="invoice">#INV1002</td>
+                <td>
+                    <button class="action-btn">Generate</button>
+                </td>
+                <td>Jane Smith</td>
+                <td>
+                    <button class="action-btn" [disabled]="true">Mark Done</button>
+                </td>
+            </tr>
+            <tr>
+                <td>ORD003</td>
+                <td>Jim Halpert</td>
+                <td>Chicago</td>
+                <td>2025-06-05 09:15</td>
+                <td>2025-06-06 16:30</td>
+                <td class="invoice">#INV1002</td>
+                <td>
+                    <button class="action-btn">Generate</button>
+                </td>
+                <td>Mike Brown</td>
+                <td>
+                    <button class="action-btn" [disabled]="true">Mark Done</button>
+                </td>
+            </tr>
+            <tr>
+                <td>ORD004</td>
+                <td>Dwight Schrute</td>
+                <td>Houston</td>
+                <td>2025-06-07 14:00</td>
+                <td>2025-06-08 19:00</td>
+                <td class="invoice">#INV1002</td>
+                <td>
+                    <button class="action-btn">Generate</button>
+                </td>
+                <td>Linda Green</td>
+                <td>
+                    <button class="action-btn" [disabled]="true">Mark Done</button>
+                </td>
+            </tr>
+            <tr>
+                <td>ORD005</td>
+                <td>Stanley Hudson</td>
+                <td>Phoenix</td>
+                <td>2025-06-09 11:30</td>
+                <td>2025-06-10 17:45</td>
+                <td>
+                    <button class="action-btn">Generate</button>
+                </td>
+                <td>
+                    <button class="action-btn">Generate</button>
+                </td>
+                <td>Chris White</td>
+                <td>
+                    <button class="action-btn" [disabled]="true">Mark Done</button>
+                </td>
+            </tr>
+            <tr>
+                <td>ORD006</td>
+                <td>Angela Martin</td>
+                <td>Philadelphia</td>
+                <td>2025-06-11 08:45</td>
+                <td>2025-06-12 14:00</td>
+                <td>
+                    <button class="action-btn">Generate</button>
+                </td>
+                <td>No</td>
+                <td>Sarah Black</td>
+                <td>
+                    <button class="action-btn" [disabled]="true">Mark Done</button>
+                </td>
+            </tr>
+            <tr>
+                <td>ORD007</td>
+                <td>Kevin Malone</td>
+                <td>San Antonio</td>
+                <td>2025-06-13 10:20</td>
+                <td>2025-06-14 16:10</td>
+                <td class="invoice">#INV1002</td>
+                <td>Yes</td>
+                <td>Paul Blue</td>
+                <td>
+                    <button class="action-btn" [disabled]="true">Mark Done</button>
+                </td>
+            </tr>
+            <tr>
+                <td>ORD008</td>
+                <td>Phyllis Vance</td>
+                <td>San Diego</td>
+                <td>2025-06-15 13:00</td>
+                <td>2025-06-16 18:30</td>
+                <td class="invoice">#INV1002</td>
+                <td>No</td>
+                <td>Anna Gray</td>
+                <td>
+                    <button class="action-btn" [disabled]="true">Mark Done</button>
+                </td>
+            </tr>
+            <tr>
+                <td>ORD009</td>
+                <td>Oscar Martinez</td>
+                <td>Dallas</td>
+                <td>2025-06-17 09:50</td>
+                <td>2025-06-18 15:20</td>
+                <td class="invoice">#INV1002</td>
+                <td>Yes</td>
+                <td>Mark Yellow</td>
+                <td>
+                    <button class="action-btn" [disabled]="true">Mark Done</button>
+                </td>
+            </tr>
+            <tr>
+                <td>ORD010</td>
+                <td>Kelly Kapoor</td>
+                <td>San Jose</td>
+                <td>2025-06-19 11:10</td>
+                <td>2025-06-20 16:40</td>
+                <td class="invoice">#INV1002</td>
+                <td>No</td>
+                <td>Linda Orange</td>
+                <td>
+                    <button class="action-btn" [disabled]="true">Mark Done</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,19 @@
+<app-card>
+    <h2>
+        Drop Customer Report
+    </h2>
+    <app-table [columns]="[
+                'name',
+                'mobile',
+                'average_amount',
+                'first_order',
+                'last_order'
+            ]" [columnLabels]="{
+                name: 'Name',
+                mobile: 'Mobile',
+                average_amount: 'Average Amount',
+                first_order: 'First Order',
+                last_order: 'Last Order'
+            }" [data]="tableData">
+    </app-table>
+</app-card>

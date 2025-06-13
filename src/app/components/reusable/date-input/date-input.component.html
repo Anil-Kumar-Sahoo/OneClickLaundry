@@ -1,0 +1,5 @@
+<div class="date-input-group">
+    <label>{{ label }}</label>
+    <input type="date" class="date-input" [placeholder]="placeholder" [(ngModel)]="value"
+        (ngModelChange)="onDateChange($event)" />
+</div>
