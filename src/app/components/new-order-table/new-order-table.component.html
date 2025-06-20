@@ -1,0 +1,137 @@
+<!-- <div class="table-wrapper">
+    <table class="custom-table">
+        <thead>
+            <tr>
+                <th>Order</th>
+                <th>Pickup D</th>
+                <th>Pickup T</th>
+                <th>Customer</th>
+                <th>Address</th>
+                <th>Instructions</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1024</td>
+                <td>2025-06-04</td>
+                <td>10:00 AM</td>
+                <td>John Doe</td>
+                <td>123 Main Street</td>
+                <td>Leave at the doorstep</td>
+                <td>
+                    <button class="action-btn delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1025</td>
+                <td>2025-06-05</td>
+                <td>11:30 AM</td>
+                <td>Jane Smith</td>
+                <td>456 Elm Avenue</td>
+                <td>Ring the bell</td>
+                <td>
+                    <button class="action-btn delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1026</td>
+                <td>2025-06-06</td>
+                <td>09:15 AM</td>
+                <td>Michael Brown</td>
+                <td>789 Oak Street</td>
+                <td>Call upon arrival</td>
+                <td>
+                    <button class="action-btn delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1027</td>
+                <td>2025-06-07</td>
+                <td>02:45 PM</td>
+                <td>Linda Green</td>
+                <td>321 Pine Lane</td>
+                <td>Leave with neighbor</td>
+                <td>
+                    <button class="action-btn delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1028</td>
+                <td>2025-06-08</td>
+                <td>01:00 PM</td>
+                <td>David Lee</td>
+                <td>654 Maple Drive</td>
+                <td>Beware of dog</td>
+                <td>
+                    <button class="action-btn delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1029</td>
+                <td>2025-06-09</td>
+                <td>12:30 PM</td>
+                <td>Susan White</td>
+                <td>987 Birch Road</td>
+                <td>Leave package at back door</td>
+                <td>
+                    <button class="action-btn delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1030</td>
+                <td>2025-06-10</td>
+                <td>03:00 PM</td>
+                <td>James Wilson</td>
+                <td>159 Cedar Avenue</td>
+                <td>Do not ring doorbell</td>
+                <td>
+                    <button class="action-btn delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1031</td>
+                <td>2025-06-11</td>
+                <td>04:15 PM</td>
+                <td>Patricia Taylor</td>
+                <td>753 Spruce Street</td>
+                <td>Leave with receptionist</td>
+                <td>
+                    <button class="action-btn delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1032</td>
+                <td>2025-06-12</td>
+                <td>10:30 AM</td>
+                <td>Robert Johnson</td>
+                <td>852 Willow Way</td>
+                <td>Call 10 mins before arrival</td>
+                <td>
+                    <button class="action-btn delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1033</td>
+                <td>2025-06-12</td>
+                <td>10:30 AM</td>
+                <td>Roman Range</td>
+                <td>America</td>
+                <td>Message 10 mins after arrival</td>
+                <td>
+                    <button class="action-btn delete">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+
+<app-table [columns]="['orderId', 'pickupDate', 'pickupTime', 'customerName', 'address', 'instructions']"
+    [columnLabels]="{
+    orderId: 'Order',
+    pickupDate: 'Pickup D',
+    pickupTime: 'Pickup T',
+    customerName: 'Customer',
+    address: 'Address',
+    instructions: 'Instructions'
+  }" [data]="orderList" [showActions]="true" [showDelete]="true" (delete)="onDelete($event)"></app-table>

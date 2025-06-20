@@ -1,0 +1,13 @@
+<div class="input-group">
+  <label *ngIf="label" class="input-label">{{ label }}</label>
+
+  <div class="input-wrapper">
+    <i *ngIf="iconClass" class="input-icon" [class]="iconClass"></i>
+    <input [type]="type" [placeholder]="placeholder" class="input-element" [disabled]="isDisabled" [value]="value"
+      (input)="handleInput($event)" (blur)="handleBlur()" />
+  </div>
+
+  <div class="error-message">
+    <ng-content></ng-content>
+  </div>
+</div>

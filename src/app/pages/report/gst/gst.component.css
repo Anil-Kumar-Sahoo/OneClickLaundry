@@ -1,0 +1,89 @@
+app-card {
+    display: block;
+    max-width: 122rem;
+    margin: 2rem;
+}
+
+.header h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.head-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+    gap: 2rem;
+}
+
+.head-content .left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex: 1;
+}
+
+.head-content .right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.summary {
+    font-size: 1.4rem;
+    color: var(--text-secondary-color);
+    user-select: none;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.cards app-card {
+    background-color: var(--bg-secondary-color);
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    transition: transform 0.2s ease;
+}
+
+.cards app-card:hover {
+    transform: translateY(-4px);
+}
+
+.cards p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-primary-color);
+    text-align: center;
+    margin: 0;
+}
+
+.table{
+    padding: 0 2rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .head-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .head-content .right {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}

@@ -1,0 +1,44 @@
+<div class="tab-container">
+    <div class="tab-labels">
+        <ng-container *ngFor="let label of tabLabels.toArray(); let i = index">
+            <div class="tab-label" [class.active]="i === activeIndex()" (click)="setActive(i)">
+                <ng-container *ngTemplateOutlet="label"></ng-container>
+            </div>
+        </ng-container>
+    </div>
+
+    <div class="tab-contents">
+        <ng-container *ngFor="let content of tabContents.toArray(); let i = index">
+            <div class="tab-content" *ngIf="i === activeIndex()">
+                <ng-container *ngTemplateOutlet="content"></ng-container>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+
+
+<!-- 
+
+
+        <app-tab-switcher>
+            <ng-template #tabLabel>Overview</ng-template>
+            <ng-template #tabLabel>Settings</ng-template>
+            <ng-template #tabLabel>Reports</ng-template>
+
+            <ng-template #tabContent>
+                <p>This is the overview tab content.</p>
+            </ng-template>
+            <ng-template #tabContent>
+                <p>Here are your settings.</p>
+            </ng-template>
+            <ng-template #tabContent>
+                <p>Analytics and reports go here.</p>
+            </ng-template>
+        </app-tab-switcher>
+
+
+
+
+
+-->

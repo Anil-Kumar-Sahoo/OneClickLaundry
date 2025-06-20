@@ -1,0 +1,68 @@
+<div class="container">
+    <section class="dashboard-overview">
+        <div class="card">
+            <div class="card-content">
+                <div>
+                    <h3>Total Orders</h3>
+                    <p>120</p>
+                </div>
+                <i class="fas fa-shopping-cart card-icon"></i>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div>
+                    <h3>In Progress</h3>
+                    <p>45</p>
+                </div>
+                <i class="fas fa-spinner card-icon"></i>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div>
+                    <h3>Revenue</h3>
+                    <p>₹25,000</p>
+                </div>
+                <i class="fa-solid fa-coins card-icon"></i>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div>
+                    <h3>Pending Deliveries</h3>
+                    <p>8</p>
+                </div>
+                <i class="fas fa-truck card-icon"></i>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="graph">
+        <app-card class="chart-card large">
+            <app-bar-chart></app-bar-chart>
+        </app-card>
+
+        <app-card class="chart-card small">
+            <app-doughnut-chart></app-doughnut-chart>
+        </app-card>
+    </section>
+
+    <section class="order-details">
+        <app-tab-switcher>
+            <ng-template #tabLabel>New Order</ng-template>
+            <ng-template #tabLabel>In Process</ng-template>
+
+            <ng-template #tabContent>
+                <app-new-order-table></app-new-order-table>
+            </ng-template>
+            <ng-template #tabContent>
+                <app-in-process-table></app-in-process-table>
+            </ng-template>
+        </app-tab-switcher>
+    </section>
+</div>

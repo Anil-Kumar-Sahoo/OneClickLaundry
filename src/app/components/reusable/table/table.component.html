@@ -1,0 +1,75 @@
+<div class="table-wrapper">
+    <table class="custom-table">
+        <thead>
+            <tr>
+                <th *ngFor="let col of columns" (click)="sortByColumn(col)" [style.width]="columnWidths[col] || 'auto'">
+                    {{ columnLabels[col] || (col | titlecase) }}
+                    <span *ngIf="sortColumn === col">
+                        {{ sortDirection === 'asc' ? '▲' : '▼' }}
+                    </span>
+                </th>
+                <th *ngIf="showStatus">Status</th>
+                <th *ngIf="showActions">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of paginatedData">
+                <td *ngFor="let col of columns" [style.width]="columnWidths[col] || 'auto'">
+                    {{ row[col] }}
+                </td>
+                <td *ngIf="showActions">
+                    <button *ngIf="showEdit" class="action-btn" (click)="edit.emit(row)">Edit</button>
+                    <button *ngIf="showDelete" class="delete-btn" (click)="delete.emit(row)">Delete</button>
+                </td>
+                <td *ngIf="showStatus">
+                    <label class="switch">
+                        <input type="checkbox" [checked]="row[statusField]" (change)="toggleStatus(row)" />
+                        <span class="slider"></span>
+                    </label>
+                </td>
+            </tr>
+            <tr *ngIf="paginatedData.length === 0">
+                <td [attr.colspan]="columns.length + (showStatus ? 1 : 0) + (showActions ? 1 : 0)" class="no-data">
+                    No matching data
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        <button class="action-btn" (click)="changePage(-1)" [disabled]="currentPage === 1">Previous</button>
+        <span>Page {{ currentPage }} out of {{ totalPages }}</span>
+        <button class="action-btn" (click)="changePage(1)" [disabled]="currentPage >= totalPages">Next</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- 
+
+
+<app-table
+  [columns]="['itemName', 'price', 'category']"
+  [columnLabels]="{ itemName: 'Item Name', price: 'Price', category: 'Category' }"
+  [columnWidths]="{ itemName: '200px', price: '100px', category: '150px' }"
+  [data]="productList"
+  [pageSize]="10"
+  [showActions]="true"
+  [showEdit]="true"
+  [showDelete]="true"
+  [showStatus]="true"
+  [searchTerm]="searchTerm"
+  (edit)="onEdit($event)"
+  (delete)="onDelete($event)"
+  (statusChange)="onStatusChange($event)"
+></app-table>
+
+
+
+
+
+-->

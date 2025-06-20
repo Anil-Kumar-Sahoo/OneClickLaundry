@@ -1,0 +1,28 @@
+<app-card>
+  <h2>Canceled Order Report</h2>
+  <app-date-range-picker></app-date-range-picker>
+  <div class="table">
+    <app-table
+      [columns]="[
+        'booking_code',
+        'invoice_id',
+        'amount',
+        'name',
+        'reason',
+        'cancelled_on',
+        'ordered_on'
+      ]"
+      [columnLabels]="{
+        booking_code: 'Booking Code',
+        invoice_id: 'Invoice ID',
+        amount: 'Amount',
+        name: 'Name',
+        reason: 'Reason',
+        cancelled_on: 'Cancelled On',
+        ordered_on: 'Ordered On'
+      }"
+      [data]="tableData"
+    >
+    </app-table>
+  </div>
+</app-card>

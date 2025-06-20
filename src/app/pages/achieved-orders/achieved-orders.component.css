@@ -1,0 +1,59 @@
+app-card {
+    margin: 2rem;
+    display: block;
+    background-color: var(--bg-secondary-color);
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+app-card h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2rem;
+}
+
+app-search-bar {
+    display: block;
+    max-width: 40rem;
+    margin: 2rem 0;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--primary-color);
+    background-color: var(--bg-secondary-color);
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.4rem;
+}
+
+.custom-table thead {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 1rem;
+    border: 1px solid var(--secondary-color);
+    text-align: left;
+    white-space: nowrap;
+    height: 5rem;
+    vertical-align: middle;
+}
+
+.custom-table tbody tr:nth-child(even) {
+    background-color: var(--bg-primary-color);
+}
+
+.custom-table tbody tr:hover {
+    background-color: #eaf6f6;
+}

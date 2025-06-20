@@ -1,0 +1,36 @@
+.not-found-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+    padding: 2rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+}
+
+.message {
+    font-size: 1.8rem;
+    color: var(--text-secondary-color);
+    margin-bottom: 2rem;
+    max-width: 40rem;
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .message {
+        font-size: 1.4rem;
+        max-width: 90vw;
+    }
+}

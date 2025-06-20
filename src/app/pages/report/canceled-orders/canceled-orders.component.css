@@ -1,0 +1,24 @@
+app-card {
+    margin: 2rem;
+    display: block;
+}
+
+app-card h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2rem;
+}
+
+app-date-range-picker {
+    display: block;
+    max-width: 30rem;
+    margin: 2rem;
+}
+
+.table{
+    padding: 0 2rem;
+}

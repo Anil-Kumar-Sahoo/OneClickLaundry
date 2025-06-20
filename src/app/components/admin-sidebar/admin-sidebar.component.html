@@ -1,0 +1,74 @@
+<nav class="sidebar">
+    <div class="branding">
+        <h3>{{ 'Store Name' | uppercase }}</h3>
+    </div>
+
+    <ul class="nav-list">
+        <li>
+            <a routerLink="/admin/dashboard" routerLinkActive="router-link-active" class="list-group-item">
+                <i class="fa fa-th-large"></i> Dashboard
+            </a>
+        </li>
+        <li>
+            <a routerLink="/admin/information" routerLinkActive="router-link-active" class="list-group-item">
+                <i class="fa fa-info-circle"></i> Information
+            </a>
+        </li>
+        <li>
+            <a routerLink="/admin/customers" routerLinkActive="router-link-active" class="list-group-item">
+                <i class="fa fa-users"></i> Customers
+            </a>
+        </li>
+        <li>
+            <a routerLink="/admin/prices" routerLinkActive="router-link-active" class="list-group-item">
+                <i class="fa fa-tag"></i> Prices
+            </a>
+        </li>
+
+        <!-- Reports Accordion -->
+        <li class="accordion-item">
+            <a role="button" class="list-group-item" (click)="toggleReports()">
+                <span><i class="fa fa-file-text"></i> Reports</span>
+                <i class="fa fa-chevron-down toggle-icon" [class.rotated]="showReports"></i>
+            </a>
+
+            <ul class="sub-list" [class.open]="showReports">
+                <li>
+                    <a routerLink="/admin/sales" routerLinkActive="router-link-active" class="sublink">
+                        <i class="fa fa-bar-chart"></i> Sales
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/gst" routerLinkActive="router-link-active" class="sublink">
+                        <i class="fa fa-percent"></i> GST
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/drop-customers" routerLinkActive="router-link-active" class="sublink">
+                        <i class="fa fa-user-times"></i> Drop Customers
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/month-wise-categories" routerLinkActive="router-link-active" class="sublink">
+                        <i class="fa fa-calendar"></i> Month-wise Categories
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/canceled-orders" routerLinkActive="router-link-active" class="sublink">
+                        <i class="fa fa-times-circle"></i> Canceled Orders
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/achieved-orders" routerLinkActive="router-link-active" class="sublink">
+                        <i class="fa fa-check-circle"></i> Achieved Orders
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a routerLink="/admin" class="list-group-item logout-link">
+                <i class="fa fa-sign-out"></i> Logout
+            </a>
+        </li>
+    </ul>
+</nav>

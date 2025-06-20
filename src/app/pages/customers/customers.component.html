@@ -1,0 +1,38 @@
+<section>
+    <app-card>
+        <div class="header">
+            <app-search-bar class="search-bar" [(model)]="searchTerm" placeholder="Search..."
+                (search)="onSearchTermChange($event)">
+            </app-search-bar>
+
+            <div>
+                <app-button (buttonClick)="addEmployee()" icon="fa-solid fa-circle-plus">
+                    Add Customers
+                </app-button>
+            </div>
+        </div>
+
+        <!-- Add Modal -->
+        <app-modal [isVisible]="addEmployeeModal" title="Add Customer" (close)="closeAddModal()">
+            <p>Add Customer Pop up Modal</p>
+        </app-modal>
+
+        <div class="table">
+            <app-table [columns]="['customer', 'contact', 'total_bookings', 'total_value','customer_since', 'last_order']"
+                [columnLabels]="{
+                                    customer: 'Customer Name',
+                                    contact: 'Contact Details',
+                                    total_bookings: 'Total Bookings',
+                                    total_value: 'Total Value',
+                                    customer_since: 'Customer Since',
+                                    last_order: 'Last Order'
+                        }" [data]="tableData" [searchTerm]="searchTerm" [showActions]="true" [showEdit]="true"
+                [showStatus]="true" (edit)="openEditModal($event)" (statusChange)="onStatusChange($event)">
+            </app-table>
+            <!-- Edit Modal -->
+            <app-modal [isVisible]="editModal" title="Edit Customer" (close)="closeEditModal()">
+                <p>Edit Customer Pop up Modal</p>
+            </app-modal>
+            </div>
+    </app-card>
+</section>

@@ -1,0 +1,35 @@
+.summary {
+    max-width: 600px;
+    margin: 0 auto 1rem auto;
+    padding: 1.5rem 2rem;
+    background-color: var(--bg-secondary-color);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    color: var(--text-primary-color);
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.summary p {
+    margin: 0;
+    font-weight: 500;
+    flex: 1 1 45%;
+    text-align: center;
+}
+
+
+.chart-container {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    margin: auto;
+    position: relative;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}

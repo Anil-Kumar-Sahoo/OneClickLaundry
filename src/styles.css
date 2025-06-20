@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #20b0b1;
+  --secondary-color: #558787;
+  --bg-primary-color: #f4f4f4;
+  --bg-secondary-color: #ffffff;
+  --text-primary-color: #000;
+  --text-secondary-color: #4d4d4d;
+  --error-color: #ff0000;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-secondary-color);
+  color: var(--text-primary-color);
+}
+
+section {
+  padding: 2rem;
+}
+
+/* ===========================  Tooltip  ============================== */
+
+.custom-tooltip {
+  background-color: var(--bg-primary-color);
+  color: var(--secondary-color);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+/* ===========================  Sweet Alert  ============================== */
+
+.swal2-popup {
+  border-radius: 1rem !important;
+  padding: 2rem !important;
+  font-size: 1.6rem;
+}
+
+.swal2-title {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.swal2-html-container {
+  color: var(--text-secondary-color);
+}
+
+.swal2-confirm {
+  background-color: var(--primary-color) !important;
+  color: #fff !important;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  padding: 0.8rem 2rem;
+}
+
+.swal2-cancel {
+  background-color: #ccc !important;
+  color: #000 !important;
+  border-radius: 0.5rem;
+  padding: 0.8rem 2rem;
+}
+
+.swal2-toast {
+  font-size: 1.4rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}
+/* ===========================  Toastr  ============================== */
+
+.toast-container {
+  top: .5rem !important;
+  right: .5rem !important;
+  font-size: 1.7rem;
+}
+
+/* ===================================================================== */

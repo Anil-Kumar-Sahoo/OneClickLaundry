@@ -1,0 +1,28 @@
+<app-card>
+  <h2>Month-Wise Catagories Report</h2>
+  <div class="table">
+    <app-table
+      [columns]="[
+        'month',
+        'wash_fold',
+        'wash_iron',
+        'steam_pressing',
+        'standard_iron',
+        'premium_laundry',
+        'dry_cleaning'
+      ]"
+      [columnLabels]="{
+        month: 'Month',
+        wash_fold: 'Wash & Fold',
+        wash_iron: 'Wash & Iron',
+        steam_pressing: 'Steam Pressing',
+        standard_iron: 'Standard Iron',
+        premium_laundry: 'Premium Laundry',
+        dry_cleaning: 'Dry Cleaning'
+      }"
+      [data]="tableData"
+      [pageSize]="12"
+    >
+    </app-table>
+  </div>
+</app-card>

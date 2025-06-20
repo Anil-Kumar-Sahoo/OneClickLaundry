@@ -1,0 +1,50 @@
+<app-auth-form-wrapper formTitle="Login" formSubTitle="Feel free to login">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()" novalidate>
+        <div class="input-box">
+            <div class="field">
+                <app-input formControlName="email" label="Email" type="email" placeholder="Enter Email"
+                    iconClass="fa-solid fa-envelope">
+                    @if (email?.touched && email?.invalid) {
+                    <div class="error-message">
+                        @if (email?.errors?.['required']) {
+                        <span>Email is required</span>
+                        }
+                        @else if (email?.errors?.['email']) {
+                        <span>Please enter a valid email address</span>
+                        }
+                    </div>
+                    }
+                </app-input>
+
+                <app-input formControlName="password" label="Password" type="password" placeholder="Enter Password"
+                    iconClass="fa-solid fa-lock">
+                    @if (password?.touched && password?.invalid) {
+                    <div class="error-message">
+                        @if (password?.errors?.['required']) {
+                        <span>Password is required</span>
+                        }
+                        @else if (password?.errors?.['minlength']) {
+                        <span>Password must be at least 6 characters</span>
+                        }
+                        @else if (password?.errors?.['pattern']) {
+                        <span>Must include uppercase, number & special character</span>
+                        }
+                    </div>
+                    }
+                </app-input>
+            </div>
+
+            <a routerLink="/forgot-password">Forgot password</a>
+        </div>
+
+        <div class="btn">
+            <app-button width="100%" type="submit" [disabled]="isLoading">
+                @if (!isLoading) {
+                <span>Login</span>
+                } @else {
+                <span>Logging in...</span>
+                }
+            </app-button>
+        </div>
+    </form>
+</app-auth-form-wrapper>

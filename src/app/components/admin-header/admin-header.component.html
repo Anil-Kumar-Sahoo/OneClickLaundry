@@ -1,0 +1,47 @@
+<nav class="header">
+    <div class="logo">
+        <p>Laundry<span>System</span></p>
+    </div>
+
+    <div class="nav-center">
+        <ul class="nav-links">
+            <li>
+                <a routerLink="/admin/dashboard" routerLinkActive="router-link-active">Dashboard</a>
+            </li>
+            <li>
+                <a routerLink="/admin/information" routerLinkActive="router-link-active">Information</a>
+            </li>
+            <li>
+                <a routerLink="/admin/customers" routerLinkActive="router-link-active">Customers</a>
+            </li>
+            <li>
+                <a routerLink="/admin/prices" routerLinkActive="router-link-active">Prices</a>
+            </li>
+            <li class="dropdown">
+                <span>Reports ▾</span>
+                <ul class="dropdown-menu">
+                    <li><a routerLink="/admin/sales" routerLinkActive="router-link-active">Sales</a></li>
+                    <li><a routerLink="/admin/gst" routerLinkActive="router-link-active">GST</a></li>
+                    <li><a routerLink="/admin/drop-customers" routerLinkActive="router-link-active">Drop Customers</a>
+                    </li>
+                    <li><a routerLink="/admin/month-wise-categories" routerLinkActive="router-link-active">Month-wise
+                            Categories</a></li>
+                    <li><a routerLink="/admin/canceled-orders" routerLinkActive="router-link-active">Canceled Orders</a>
+                    </li>
+                    <li><a routerLink="/admin/achieved-orders" routerLinkActive="router-link-active">Achieved Orders</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="profile-dropdown dropdown">
+        <i class="fa-solid fa-user-tie"></i>
+        <span>Admin ▾</span>
+        <ul class="dropdown-menu">
+            <li><a routerLink="/admin/information" routerLinkActive="router-link-active">Update Profile</a></li>
+            <li><a routerLink="/admin/change-password" routerLinkActive="router-link-active">Change Password</a></li>
+            <li><a class="logout-btn">Logout</a></li>
+        </ul>
+    </div>
+</nav>

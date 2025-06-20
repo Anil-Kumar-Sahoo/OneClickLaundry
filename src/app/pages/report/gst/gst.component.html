@@ -1,0 +1,71 @@
+<app-card>
+    <div class="header">
+        <h2>GST Report</h2>
+    </div>
+    <div class="head-content">
+        <div class="left">
+            <app-date-range-picker [startDate]="selectedStart" [endDate]="selectedEnd"
+                (dateRangeChange)="handleDateChange($event)">
+            </app-date-range-picker>
+
+            <p class="summary">Selected: {{ selectedStart }} → {{ selectedEnd }}</p>
+        </div>
+        <div class="right">
+            <app-button icon="fa-solid fa-file-export">Export</app-button>
+        </div>
+    </div>
+    <div class="output">
+        <div class="cards">
+            <app-card>
+                <!-- <div class="icon"></div> -->
+                <p>TOTAL TAXABLE VALUE: ₹58672.46</p>
+            </app-card>
+            <app-card>
+                <!-- <div class="icon"></div> -->
+                <p>TOTAL CGST VALUE:
+                    ₹5280.45</p>
+            </app-card>
+            <app-card>
+                <!-- <div class="icon"></div> -->
+                <p>TOTAL SGST VALUE:
+                    ₹5280.45</p>
+            </app-card>
+            <app-card>
+                <!-- <div class="icon"></div> -->
+                <p>TOTAL INVOICE VALUE:
+                    ₹69233.56</p>
+            </app-card>
+        </div>
+        <div class="table">
+            <app-table [columns]="[
+                's_no',
+                'booking_id',
+                'invoice_no',
+                'invoice_date',
+                'customer_name',
+                'customer_phone',
+                'payment_status',
+                'customer_gstin',
+                'place_of_supply',
+                'taxable_value',
+                'cgst',
+                'sgst',
+                'total_invoice_value'
+            ]" [columnLabels]="{
+                s_no: 'S.No.',
+                booking_id: 'Booking ID',
+                invoice_no: 'Invoice No.',
+                invoice_date: 'Invoice Date',
+                customer_name: 'Customer Name',
+                customer_phone: 'Customer Ph. No.',
+                payment_status: 'Payment Status',
+                customer_gstin: 'Customer GSTIN',
+                place_of_supply: 'Place of Supply',
+                taxable_value: 'Taxable Value',
+                cgst: 'CGST',
+                sgst: 'SGST',
+                total_invoice_value: 'Total Invoice Value'
+            }" [data]="tableData"></app-table>
+        </div>
+    </div>
+</app-card>

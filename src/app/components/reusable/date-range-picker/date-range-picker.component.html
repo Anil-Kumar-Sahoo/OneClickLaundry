@@ -1,0 +1,53 @@
+<div class="date-range-container">
+    <div class="input-group">
+        <label for="start-date">From:</label>
+        <input type="date" id="start-date" [value]="startDate" (change)="onStartDateChange($event)" />
+    </div>
+
+    <div class="input-group">
+        <label for="end-date">To:</label>
+        <input type="date" id="end-date" [value]="endDate" (change)="onEndDateChange($event)" />
+    </div>
+</div>
+
+
+<!-- 
+
+
+HTML
+
+<app-date-range-picker
+  [startDate]="selectedStart"
+  [endDate]="selectedEnd"
+  (dateRangeChange)="handleDateChange($event)">
+</app-date-range-picker>
+
+<p class="summary">Selected: {{ selectedStart }} → {{ selectedEnd }}</p>
+
+
+TS
+
+  selectedStart: string = '';
+  selectedEnd: string = '';
+
+  handleDateChange(range: { startDate: string; endDate: string }): void {
+    this.selectedStart = range.startDate;
+    this.selectedEnd = range.endDate;
+    // You can now use this range in filters, queries, etc.
+    console.log('Selected Range:', range);
+  }
+
+  CSS
+
+  .summary {
+  margin-top: 1.2rem;
+  font-size: 1.4rem;
+  color: var(--text-secondary-color);
+}
+
+
+
+
+
+
+-->

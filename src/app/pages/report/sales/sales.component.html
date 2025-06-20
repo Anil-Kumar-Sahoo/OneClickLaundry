@@ -1,0 +1,62 @@
+<section>
+  <app-card>
+    <div class="header">
+      <h2>Sales Report</h2>
+    </div>
+    <div class="head-content">
+      <div class="left">
+        <app-date-range-picker
+          [startDate]="selectedStart"
+          [endDate]="selectedEnd"
+          (dateRangeChange)="handleDateChange($event)"
+        >
+        </app-date-range-picker>
+
+        <p class="summary">Selected: {{ selectedStart }} → {{ selectedEnd }}</p>
+      </div>
+      <div class="right">
+        <app-button icon="fa-solid fa-file-export">Export</app-button>
+      </div>
+    </div>
+    <div class="table">
+      <app-table
+        [columns]="[
+          'date',
+          'd_c_sale',
+          'pl_kg_sale',
+          'laundry_wf_sale',
+          'laundry_wi_sale',
+          'sp_sale',
+          'si_sale',
+          'upi_wallet',
+          'credit_debit_card',
+          'bank_transfer',
+          'cash',
+          'discount',
+          'net_amount',
+          'gst_18',
+          'total'
+        ]"
+        [columnLabels]="{
+          date: 'Date',
+          d_c_sale: 'D.C. Sale',
+          pl_kg_sale: 'PL/KG Sale',
+          laundry_wf_sale: 'Laundry (W & F) Sale',
+          laundry_wi_sale: 'Laundry (W & I) Sale',
+          sp_sale: 'S.P. Sale',
+          si_sale: 'S.I. Sale',
+          upi_wallet: 'UPI/Wallet',
+          credit_debit_card: 'Credit/Debit Card',
+          bank_transfer: 'Bank Transfer',
+          cash: 'Cash',
+          discount: 'Discount',
+          net_amount: 'Net Amount',
+          gst_18: 'GST (18%)',
+          total: 'Total'
+        }"
+        [data]="tableData"
+      >
+      </app-table>
+    </div>
+  </app-card>
+</section>

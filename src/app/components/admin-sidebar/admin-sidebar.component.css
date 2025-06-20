@@ -1,0 +1,115 @@
+.sidebar {
+    font-size: 1.6rem;
+    /* color: var(--text-secondary-color); */
+}
+
+.branding {
+    padding: 2rem;
+    border-bottom: 1px solid var(--primary-color);
+    background-color: var(--bg-primary-color);
+}
+
+.branding h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.nav-list {
+    margin-top: 1rem;
+}
+
+.list-group-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 2rem;
+    border-left: 4px solid transparent;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    color: var(--text-secondary-color);
+}
+
+.list-group-item:hover {
+    background-color: var(--text-secondary-color);
+    color: var(--primary-color);
+    border-left: 4px solid var(--primary-color);
+    cursor: pointer;
+}
+
+.router-link-active {
+    background-color: var(--primary-color);
+    border-left: 4px solid var(--secondary-color);
+    color: var(--bg-primary-color);
+}
+
+.list-group-item i {
+    width: 20px;
+    text-align: center;
+}
+
+.accordion-item {
+    border: none;
+}
+
+.toggle-icon {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.toggle-icon.rotated {
+    transform: rotate(180deg);
+}
+
+.sub-list {
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 0;
+    list-style: none;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.sub-list.open {
+    max-height: 35rem;
+    padding-top: 0.5rem;
+}
+
+.sublink {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem 1rem 4.5rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    color: var(--text-secondary-color);
+}
+
+.sublink:hover {
+    background-color: var(--text-secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.sublink.router-link-active {
+    background-color: var(--primary-color);
+    border-left: 4px solid var(--secondary-color);
+    color: var(--bg-primary-color);
+}
+
+.logout-link {
+    color: var(--error-color) !important;
+    font-weight: 600;
+}
+
+.logout-link i {
+    color: var(--error-color) !important;
+}
+
+.logout-link:hover {
+    background-color: #ffebee;
+    border-left: 4px solid var(--error-color);
+    cursor: pointer;
+}

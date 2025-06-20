@@ -1,0 +1,66 @@
+/* doughnut-chart.component.css */
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-secondary-color);
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    color: var(--text-primary-color);
+}
+
+.chart-legend-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chart-wrapper {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.4rem;
+    color: var(--text-secondary-color);
+    background-color: var(--bg-secondary-color);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    text-align: left;
+
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-weight: 500;
+}
+
+.legend-color {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.percentage {
+    color: var(--text-primary-color);
+    font-weight: bold;
+}

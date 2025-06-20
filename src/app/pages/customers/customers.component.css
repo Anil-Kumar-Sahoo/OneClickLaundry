@@ -1,0 +1,21 @@
+section {
+    min-height: calc(100vh - 8rem);
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+.search-bar {
+    flex: 1;
+    max-width: 400px;
+}
+
+.table {
+    margin: 2rem;
+}

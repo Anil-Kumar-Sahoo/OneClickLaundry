@@ -1,0 +1,150 @@
+/* ===== Header Layout ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2rem;
+    background-color: var(--bg-secondary-color);
+    color: var(--text-primary-color);
+    border-bottom: 1px solid #ddd;
+    font-size: 1.6rem;
+    height: 100%;
+}
+
+/* ===== Logo ===== */
+.logo {
+    flex: 0 0 auto;
+}
+
+.logo p {
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+/* ===== Navigation Center ===== */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== Nav Links ===== */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a,
+.nav-links span {
+    text-decoration: none;
+    color: var(--text-secondary-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+.nav-links a:hover,
+.nav-links span:hover {
+    color: var(--secondary-color);
+}
+
+.router-link-active {
+    color: var(--primary-color) !important;
+    font-weight: bold;
+}
+
+/* ===== Dropdown Menu ===== */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-secondary-color);
+    border: 1px solid #ccc;
+    padding: 1rem 0;
+    display: none;
+    flex-direction: column;
+    min-width: 200px;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-menu li {
+    padding: 0.5rem 1.5rem;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a {
+    color: var(--text-secondary-color);
+    transition: color 0.2s;
+}
+
+.dropdown-menu li a:hover {
+    color: var(--secondary-color);
+}
+
+/* ===== Logout Button in Dropdown ===== */
+.logout-btn {
+    background-color: var(--error-color);
+    color: #fff !important;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    background-color: #c90e0e;
+}
+
+/* ===== Profile Dropdown (Right) ===== */
+.profile-dropdown {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-dropdown i {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+}
+
+.profile-dropdown span {
+    color: var(--text-secondary-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.profile-dropdown:hover span {
+    color: var(--secondary-color);
+}
+
+.profile-dropdown .dropdown-menu {
+    left: auto;
+    right: 0;
+}

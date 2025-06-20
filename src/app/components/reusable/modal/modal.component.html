@@ -1,0 +1,49 @@
+<div class="modal-backdrop" *ngIf="isVisible" (click)="onClose()"></div>
+
+<div class="modal-container" *ngIf="isVisible">
+    <div class="modal-header">
+        <h3>{{ title }}</h3>
+        <button class="close-btn" (click)="onClose()">X</button>
+    </div>
+    <div class="modal-body">
+        <ng-content></ng-content>
+    </div>
+</div>
+
+
+
+
+<!-- 
+
+ts
+
+  showModal = false;
+
+  openModal() {
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
+  }
+
+
+  html
+
+
+  <button (click)="openModal()">Open Modal</button>
+
+<app-modal
+  [isVisible]="showModal"
+  title="My Modal"
+  (close)="closeModal()"
+>
+  <p>This is a reusable modal. You can place any content here.</p>
+</app-modal>
+
+
+
+
+
+
+-->
